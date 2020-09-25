@@ -1,25 +1,38 @@
-function add () {
-	
+function add (a, b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a, b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (inputArray) {
+	let cumulativeSum = 0;
+	for (let i = 0; i < inputArray.length; i++)
+	{
+		cumulativeSum += inputArray[i];
+	}
+	return cumulativeSum;
 }
 
-function multiply () {
-	
+function multiply (inputArray) {
+	let cumulativeMultiple = 1;
+	for (let i = 0; i < inputArray.length; i++)
+	{
+		cumulativeMultiple *= inputArray[i];
+	}
+	return cumulativeMultiple;
 }
 
-function power() {
-	
+function power(a, b) {
+	return Math.pow(a, b);
 }
 
-function factorial() {
-	
+function factorial(input) {
+	if (input < 1) { return 1;}
+	else {
+		return input * factorial(input - 1);
+	}
 }
 
 module.exports = {
